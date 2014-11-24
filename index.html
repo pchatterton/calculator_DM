@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app='calcApp'>
+<head>
+	<title>Calculator</title>
+</head>
+<body ng-controller='mainCtrl'>
+	<h3>Calcuate</h3>
+	<div>
+		<input type='text' ng-model='prob.val1'>
+		<select ng-model='prob.operator'>
+			<option value='add'>+</option>
+			<option value='subtract'>-</option>
+			<option value='multiply'>*</option>
+		</select>
+		<input type='text' ng-model='prob.val2'>
+		<button ng-click='calcAnswer()'>=</button>
+		<p>{{answer}}</p>
+	</div>
+	<h3>History</h3>
+	<div>
+		<p ng-repeat='history in histories'>{{history}}</p>
+	</div>
+	<script src='angular.min.js'></script>
+	<script src='app.js'></script>
+</body>
+</html>
